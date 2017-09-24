@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
   selector: 'app-my-app',
   template: `
     <h1>{{bigTitle}}</h1>
-    <app-my-heroes></app-my-heroes>
+    <a routerLink="/heroes">Heroes</a>
+    <router-outlet></router-outlet>
   `
 })
 
 export class AppComponent {
-  bigTitle: String = 'a jing';
+  bigTitle: String = 'Tour of Heroes';
 
 }

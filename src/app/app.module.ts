@@ -2,7 +2,8 @@ import { HeroService } from './hero.service';
 import { HeroComponent } from './hero.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -15,7 +16,14 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([
+      {
+        path: 'heroes',
+        component: HeroComponent
+      }
+
+    ])
   ],
   providers: [HeroService],
   bootstrap: [AppComponent]
