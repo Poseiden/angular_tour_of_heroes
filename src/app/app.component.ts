@@ -2,13 +2,16 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-my-app',
   template: `
-    <h1>{{bigTitle}}</h1>
-    <a routerLink="/heroes">Heroes</a>
+    <h1>{{title}}</h1>
+    <nav>
+      <a routerLink="/dashboard">Dashboard</a>
+      <a routerLink="/heroes">Heroes</a>
+    </nav>
     <router-outlet></router-outlet>
   `
 })
 
 export class AppComponent {
-  bigTitle: String = 'Tour of Heroes';
+  title: String = 'Tour of Heroes';
 
 }

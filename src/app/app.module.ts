@@ -1,3 +1,4 @@
+import { DashComponent } from './dash.component';
 import { HeroService } from './hero.service';
 import { HeroComponent } from './hero.component';
 import { HeroDetailComponent } from './hero-detail.component';
@@ -12,7 +13,8 @@ import { AppComponent } from './app.component';
   declarations: [
     AppComponent,
     HeroDetailComponent,
-    HeroComponent
+    HeroComponent,
+    DashComponent
   ],
   imports: [
     BrowserModule,
@@ -21,8 +23,17 @@ import { AppComponent } from './app.component';
       {
         path: 'heroes',
         component: HeroComponent
+      }, {
+        path: 'dashboard',
+        component: DashComponent
+      }, {
+        path: '',
+        component: DashComponent,
+        pathMatch: 'full'
+      }, {
+        path: 'detail/:id',
+        component: HeroDetailComponent
       }
-
     ])
   ],
   providers: [HeroService],
