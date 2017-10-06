@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './app-routing.module';
 import { DashComponent } from './dash.component';
 import { HeroService } from './hero.service';
 import { HeroComponent } from './hero.component';
@@ -19,22 +20,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot([
-      {
-        path: 'heroes',
-        component: HeroComponent
-      }, {
-        path: 'dashboard',
-        component: DashComponent
-      }, {
-        path: '',
-        component: DashComponent,
-        pathMatch: 'full'
-      }, {
-        path: 'detail/:id',
-        component: HeroDetailComponent
-      }
-    ])
+    AppRoutingModule
   ],
   providers: [HeroService],
   bootstrap: [AppComponent]
