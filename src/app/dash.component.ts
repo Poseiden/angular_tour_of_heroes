@@ -4,7 +4,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-my-dashboard',
-    templateUrl: './dashboard.html'
+    templateUrl: './dashboard.html',
+    styleUrls: ['./dashboard.component.css']
 })
 
 export class DashComponent implements OnInit {
