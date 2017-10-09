@@ -24,6 +24,11 @@ export class HeroDetailComponent implements OnInit {
     this.location.back();
   }
 
+  save(): void {
+    this.heroService
+    .update(this.hero)
+    .then(() => this.goBack());
+  }
 
   constructor(
     private route: ActivatedRoute,
