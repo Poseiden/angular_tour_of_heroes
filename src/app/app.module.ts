@@ -1,3 +1,4 @@
+import { HeroSearchComponent } from './hero-search.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashComponent } from './dash.component';
 import { HeroService } from './hero.service';
@@ -18,7 +19,8 @@ import { InMemoryDataService } from './in-memory-data.service';
     AppComponent,
     HeroDetailComponent,
     HeroComponent,
-    DashComponent
+    DashComponent,
+    HeroSearchComponent
   ],
   imports: [
     BrowserModule,
